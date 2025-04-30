@@ -5,7 +5,7 @@
 #define LED_PIN 11         // 連接第一個LED的腳位
 #define BUTTON_PINS 2      // 連接按鈕的腳位
 
-Adafruit_NeoPixel leds(NUM_LEDS_TOTAL, LED_PIN, NEO_GRB + NEO_KHZ800);  //  定義ws2812燈條
+Adafruit_NeoPixel leds(NUM_LEDS_TOTAL, LED_PIN, NEO_GRB + NEO_KHZ800);  //定義ws2812燈條
 
 bool last_status;
 bool status;
@@ -21,12 +21,12 @@ void setup() {
 
 void loop() {
 
-  if (ifBotton()) unit++; //  按鈕功能函數, 如果按鈕被按下, unit +1  
-  setunitColor(255, 255, 71);  //  香蕉黃
+  if (ifBotton()) unit++; //按鈕功能函數, 如果按鈕被按下, unit +1  
+  setunitColor(255, 255, 71);  //香蕉黃
 
-  if (unit > NUM_LEDS_TOTAL) {  // 超過最大燈數
+  if (unit > NUM_LEDS_TOTAL) {  //超過最大燈數
     Serial.println("restart!");
-    setunitColor(0, 0, 0);  //  暗
+    setunitColor(0, 0, 0);  //暗
     unit = 0;
   }
 
