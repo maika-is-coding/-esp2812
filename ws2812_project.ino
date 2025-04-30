@@ -22,7 +22,7 @@ void setup() {
 void loop() {
 
   if (ifBotton()) unit++; //按鈕功能函數, 如果按鈕被按下, unit +1  
-  setunitColor(255, 255, 71);  //香蕉黃
+  setunitColor(255, 255, 255);  //白色
 
   if (unit > NUM_LEDS_TOTAL) {  //超過最大燈數
     Serial.println("restart!");
@@ -31,7 +31,7 @@ void loop() {
   }
 
   Serial.println(status);
-  delay(100);  //防死機
+  delay(100);  //防止死機
 }
 
 void setunitColor(int red, int green, int blue) {  // 設定LED顏色
